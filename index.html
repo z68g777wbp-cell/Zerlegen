@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zerlegen</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <div id="topbar">
+
+      <div id="left-controls">
+
+        <button id="btn6" class="lvl-btn active" type="button">
+          6
+        </button>
+
+        <button id="btn10" class="lvl-btn" type="button">
+          10
+        </button>
+
+        <div class="counter">
+          <span>Richtig</span>
+          <span id="cRight" class="pill">0</span>
+        </div>
+
+        <div class="counter">
+          <span>Falsch</span>
+          <span id="cWrong" class="pill">0</span>
+        </div>
+
+        <div class="counter">
+          <span>Zeit</span>
+          <span id="timer" class="pill">0:00</span>
+        </div>
+
+      </div>
+
+
+      <div id="speed-controls">
+
+        <button
+          id="speedSlow"
+          class="speed-btn active"
+          type="button"
+          title="Schildkröte"
+          aria-label="Langsam"
+        >
+          🐢
+        </button>
+
+        <button
+          id="speedMedium"
+          class="speed-btn"
+          type="button"
+          title="Pferd"
+          aria-label="Mittel"
+        >
+          🐎
+        </button>
+
+        <button
+          id="speedFast"
+          class="speed-btn"
+          type="button"
+          title="Gepard"
+          aria-label="Schnell"
+        >
+          🐆
+        </button>
+
+      </div>
+
+
+      <div id="stars">
+
+        <svg
+          id="star6"
+          class="star"
+          viewBox="0 0 100 100"
+          aria-label="Stern für Stufe 6"
+        >
+          <polygon
+            fill="#FFD84D"
+            stroke="#C9A800"
+            stroke-width="4"
+            points="50,6 61,36 93,36 67,54 77,86 50,68 23,86 33,54 7,36 39,36"
+          />
+
+          <text
+            x="50"
+            y="62"
+            text-anchor="middle"
+            font-size="34"
+            font-family="Arial"
+            font-weight="bold"
+            fill="#6A5200"
+          >
+            6
+          </text>
+        </svg>
+
+
+        <svg
+          id="star10"
+          class="star"
+          viewBox="0 0 100 100"
+          aria-label="Stern für Stufe 10"
+        >
+          <polygon
+            fill="#FFD84D"
+            stroke="#C9A800"
+            stroke-width="4"
+            points="50,6 61,36 93,36 67,54 77,86 50,68 23,86 33,54 7,36 39,36"
+          />
+
+          <text
+            x="50"
+            y="62"
+            text-anchor="middle"
+            font-size="28"
+            font-family="Arial"
+            font-weight="bold"
+            fill="#6A5200"
+          >
+            10
+          </text>
+        </svg>
+
+      </div>
+
+    </div>
+
+
+    <div id="start-wrapper">
+
+      <button id="start-btn" type="button">
+        ▶ Start
+      </button>
+
+    </div>
+
+
+    <div id="dots-container"></div>
+
+
+    <div id="equation">
+
+      <span id="x"></span>
+
+      <span>+</span>
+
+      <input
+        id="answer"
+        type="text"
+        inputmode="numeric"
+        maxlength="2"
+        autocomplete="off"
+        aria-label="Antwort"
+      >
+
+      <span>=</span>
+
+      <span id="y"></span>
+
+    </div>
+
+
+    <div id="block-result">
+
+      <div class="result-title"></div>
+
+      <div class="result-number"></div>
+
+      <div class="result-text"></div>
+
+      <div class="result-time"></div>
+
+      <button
+        id="next-block-btn"
+        type="button"
+      >
+        Weiter
+      </button>
+
+    </div>
+
+
+    <div
+      id="keypad"
+      aria-label="Zahlentastatur"
+    ></div>
+
+  </div>
+
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
